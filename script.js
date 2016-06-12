@@ -22,7 +22,7 @@ function getMultiplier() {
   while (multiplierLoopGoing === true) {
     multiplierNum = multiplierNum * 10;
     multiplierArrayNum = multiplierArrayNum + 1;
-    if ((tolerance / multiplierNum) % 1 === 0) {
+    if ((resistance / multiplierNum) % 1 === 0) {
       multiplier = multiplierNum;
     }
     else {
