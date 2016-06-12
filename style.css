@@ -1,4 +1,8 @@
 body {
+  background-image: url('http://iconshow.me/media/images/Textures/pattern/seamless-pattern-of-circuit-board/seamless-pattern-of-circuit-board.png');
+  background-position: center center;
+  background-repeat: repeat;
+  background-attachment: fixed;
   text-align: center;
   margin: 0;
 }
