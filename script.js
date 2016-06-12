@@ -11,7 +11,7 @@ var band2Num;
 
 function updateBands() {
   //Update vars
-  getMultiplier();
+  var randomNothingness = getMultiplier();
   if ((resistanceVar / multiplierVar).toString().length === 1) {
     band1Num = 0;
     band2Num = resistanceVar / multiplierVar;
@@ -28,13 +28,12 @@ function updateBands() {
   }
   toleranceVar = document.getElementById("tolerance").value;
   resistanceVar = document.getElementById("resistance").value;
-  getMultiplier();
   //Band 1
   document.getElementById("rect1").style.fill = band1colors[band1Num];
   //Band 2
   document.getElementById("rect2").style.fill = band2colors[band2Num];
   //Band 3
-  document.getElementById("rect3").style.fill = band3colors[multiplierArrayNum];
+  document.getElementById("rect3").style.fill = band3colors[getMultiplier()];
   //Band 4
   document.getElementById("rect4").style.fill = band4colors[toleranceVar];
 }
@@ -54,10 +53,12 @@ function getMultiplier() {
       multiplierNum = multiplierNum / 10;
       multiplierArrayNum = multiplierArrayNum - 1
       multiplierVar = multiplierNum
+      return(multiplierArrayNum);
     }
     if (multiplierNum === 1000000) {
       multiplierLoopGoing = false;
       multiplierVar = multiplierNum
+      return(multiplierArrayNum);
     }
   }
 }
