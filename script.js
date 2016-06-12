@@ -36,6 +36,7 @@ function updateBands() {
   document.getElementById("rect3").style.fill = band3colors[getMultiplier()];
   //Band 4
   document.getElementById("rect4").style.fill = band4colors[toleranceVar];
+  window.scrollTo(0, -100000);
   updateBands();
 }
 
