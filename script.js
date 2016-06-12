@@ -29,9 +29,9 @@ function updateBands() {
   toleranceVar = document.getElementById("tolerance").value;
   resistanceVar = document.getElementById("resistance").value;
   //Band 1
-  document.getElementById("rect3").style.fill = band3colors[band1Num];
+  document.getElementById("rect1").style.fill = band1colors[band1Num];
   //Band 2
-  document.getElementById("rect3").style.fill = band3colors[band2Num];
+  document.getElementById("rect2").style.fill = band2colors[band2Num];
   //Band 3
   document.getElementById("rect3").style.fill = band3colors[getMultiplier()];
   //Band 4
