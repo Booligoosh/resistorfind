@@ -16,7 +16,7 @@ function updateBands() {
   document.getElementById("rect4").style.fill = band4colors[tolerance];
 }
 
-function getMulitplier() {
+function getMultiplier() {
   var multiplierLoopGoing = true;
   var multiplierNum = 0.1;
   var multiplierArrayNum = 0;
