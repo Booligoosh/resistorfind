@@ -8,6 +8,6 @@ function updateBands() {
   resitance = document.getElementById("resistance").value;
   tolerance = document.getElementById("tolerance").value;
   //Band 4
-  document.getElementById("rect4").style.color = band4colors[tolerance];
+  document.getElementById("rect4").style.fill = band4colors[tolerance];
 }
 
