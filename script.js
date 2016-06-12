@@ -3,7 +3,7 @@ var multiplier = 0;
 var tolerance = document.getElementById("tolerance").value;
 var band3colors = ["0filler", "#000000", "#6e2c00", "#ff0000", "#ff8000", "#ffff00", "#008000", "#0000ff"];
 var band4colors = ["0filler", "#6e2c00", "#ff0000", "3filler", "4filler", "#cc9933", "6filler", "7filler", "8filler", "9filler", "c9cbcb"];
-
+var multiplierArrayNum
 
 function updateBands() {
   //Update vars
