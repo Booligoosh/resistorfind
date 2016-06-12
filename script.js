@@ -11,7 +11,7 @@ var band2Num;
 
 function updateBands() {
   //Update vars
-  getMultiplier()
+  getMultiplier();
   if ((resistanceVar / multiplierVar).toString().length === 1) {
     band1Num = 0;
     band2Num = resistanceVar / multiplierVar;
