@@ -7,8 +7,8 @@ var multiplierArrayNum
 
 function updateBands() {
   //Update vars
-  resistanceVar = document.getElementById("resistance").value;
   toleranceVar = document.getElementById("tolerance").value;
+  resistanceVar = document.getElementById("resistance").value;
   //Band 3
   document.getElementById("rect3").style.fill = band3colors[getMultiplier()];
   //Band 4
