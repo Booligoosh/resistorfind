@@ -27,6 +27,7 @@ input {
 button {
   font-size: 1.75em;
   font-family: monospace;
+  margin-top: 1em;
 }
 #text {
     background-color: rgba(0,0,0,0.75);
