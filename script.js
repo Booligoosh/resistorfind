@@ -11,16 +11,17 @@ var multiplierArrayNum;
 var band1Num;
 var band2Num;
 var band1and2;
+var updateBandsCaller;
 
 function updateBandsCall() {
   updateVars();
-  updateBands();
-  updateBands();
+  updateBandsCaller = updateBands();
+  updateBandsCaller = updateBands();
 }
 
 function updateBandsCallSpecial() {
-  updateBands();
-  updateBands();
+  updateBandsCaller = updateBands();
+  updateBandsCaller = updateBands();
 }
 
 function updateVars() {
@@ -54,6 +55,7 @@ function updateBands() {
   document.getElementById("rect3").style.fill = band3colors[multiplierArrayNum];
   //Band 4
   document.getElementById("rect4").style.fill = band4colors[toleranceVar];
+  return("done");
 }
 
 function goToResistor() {
