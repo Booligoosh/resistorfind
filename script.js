@@ -90,7 +90,7 @@ function getMultiplier() {
 function rect1click() {
   band1Num = band1Num + 1;
   if (band1Num === 10) {
-    band1Num = 1;
+    band1Num = 0;
   }
   band1and2 = Number(band1Num + "" + band2Num);
   document.getElementById("resistance").value = band1and2 * multiplierVar;
