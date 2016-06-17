@@ -54,6 +54,9 @@ function updateBands() {
   document.getElementById("rect3").style.fill = band3colors[multiplierArrayNum];
   //Band 4
   document.getElementById("rect4").style.fill = band4colors[toleranceVar];
+}
+
+function goToResistor() {
   window.scrollTo(0, -100000);
 }
 
@@ -94,12 +97,12 @@ function rect3click() {
   multiplierVar = multiplierOptions[multiplierOptions.indexOf(multiplierVar) + 1];
   multiplierArrayNum = multiplierOptions.indexOf(multiplierVar) + 1;
   band1and2 = Number(band1Num + "" + band2Num);
-  updateBandsCallSpecial()
+  //updateBandsCallSpecial()
   document.getElementById("resistance").value = band1and2 * multiplierVar;
 }
 
 function rect4click() {
   toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
-  updateBandsCallSpecial();
+  //updateBandsCallSpecial();
   document.getElementById("tolerance").value = toleranceVar.toString();
 }
