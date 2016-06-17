@@ -93,5 +93,5 @@ function rect3click() {
 function rect4click() {
   toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
   updateBandsCallSpecial();
-  document.getElementById("tolerance").innerHTML = toleranceVar.toString();
+  document.getElementById("tolerance").value = toleranceVar.toString();
 }
