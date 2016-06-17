@@ -12,12 +12,17 @@ var band1Num;
 var band2Num;
 
 function updateBandsCall() {
+  updateVars();
   updateBands();
   updateBands();
 }
 
-function updateBands() {
-  //Update vars
+function updateBandsCallSpecial() {
+  updateBands();
+  updateBands();
+}
+
+function updateVars() {
   var randomNothingness = getMultiplier();
   if ((resistanceVar / multiplierVar).toString().length === 1) {
     band1Num = 0;
@@ -35,6 +40,9 @@ function updateBands() {
   }
   toleranceVar = Number(document.getElementById("tolerance").value);
   resistanceVar = Number(document.getElementById("resistance").value);
+}
+
+function updateBands() {
   //Band 1
   document.getElementById("rect1").style.fill = band1colors[band1Num];
   //Band 2
@@ -81,10 +89,10 @@ function rect2click() {
 
 function rect3click() {
   multiplierVar = multiplierOptions[multiplierOptions.indexOf(multiplierVar) + 1];
-  updateBandsCall()
+  updateBandsCallSpecial()
 }
 
 function rect4click() {
   toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
-  updateBandsCall();
+  updateBandsCallSpecial();
 }
