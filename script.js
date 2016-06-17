@@ -35,8 +35,8 @@ function updateBands() {
     band1Num = output[0];
     band2Num = output[1];
   }
-  toleranceVar = document.getElementById("tolerance").value;
-  resistanceVar = document.getElementById("resistance").value;
+  toleranceVar = Number(document.getElementById("tolerance").value);
+  resistanceVar = Number(document.getElementById("resistance").value);
   //Band 1
   document.getElementById("rect1").style.fill = band1colors[band1Num];
   //Band 2
