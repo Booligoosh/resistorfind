@@ -88,23 +88,41 @@ function getMultiplier() {
 }
 
 function rect1click() {
-  
+  band1Num = band1Num + 1;
+  if (band1Num === 10) {
+    band1Num = 1;
+  }
+  band1and2 = Number(band1Num + "" + band2Num);
+  document.getElementById("resistance").value = band1and2 * multiplierVar;
 }
 
 function rect2click() {
-  
+  band2Num = band2Num + 1;
+  if (band2Num === 10) {
+    band2Num = 1;
+  }
+  band1and2 = Number(band1Num + "" + band2Num);
+  document.getElementById("resistance").value = band1and2 * multiplierVar;
 }
 
 function rect3click() {
-  multiplierVar = multiplierOptions[multiplierOptions.indexOf(multiplierVar) + 1];
+  if (multiplierOptions.indexOf(multiplierVar) + 1 > toleranceOptions.length - 1) {
+    multiplierVar = multiplierOptions[0];
+  }
+  else {
+    multiplierVar = multiplierOptions[multiplierOptions.indexOf(multiplierVar) + 1];
+  }
   multiplierArrayNum = multiplierOptions.indexOf(multiplierVar) + 1;
   band1and2 = Number(band1Num + "" + band2Num);
-  //updateBandsCallSpecial()
   document.getElementById("resistance").value = band1and2 * multiplierVar;
 }
 
 function rect4click() {
-  toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
-  //updateBandsCallSpecial();
+  if (toleranceOptions.indexOf(toleranceVar) + 1 > toleranceOptions.length - 1) {
+    toleranceVar = toleranceOptions[0];
+  }
+  else {
+    toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
+  }
   document.getElementById("tolerance").value = toleranceVar.toString();
 }
