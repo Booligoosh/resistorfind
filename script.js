@@ -23,7 +23,7 @@ function updateBandsCallSpecial() {
 }
 
 function updateVars() {
-  getMultiplier();
+  multiplierArrayNum = getMultiplier();
   if ((resistanceVar / multiplierVar).toString().length === 1) {
     band1Num = 0;
     band2Num = resistanceVar / multiplierVar;
@@ -69,10 +69,12 @@ function getMultiplier() {
       multiplierNum = multiplierNum / 10;
       multiplierArrayNum = multiplierArrayNum - 1
       multiplierVar = multiplierNum;
+      return(multiplierArrayNum);
     }
     if (multiplierNum === 1000000) {
       multiplierLoopGoing = false;
       multiplierVar = multiplierNum;
+      return(multiplierArrayNum);
     }
   }
 }
