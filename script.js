@@ -10,6 +10,7 @@ var toleranceOptions = [1, 2, 5, 10];
 var multiplierArrayNum;
 var band1Num;
 var band2Num;
+var band1and2;
 
 function updateBandsCall() {
   updateVars();
@@ -27,6 +28,7 @@ function updateVars() {
   if ((resistanceVar / multiplierVar).toString().length === 1) {
     band1Num = 0;
     band2Num = resistanceVar / multiplierVar;
+    band1and2 = Number(band1Num + "" + band2Num);
   }
   else {
     var number = resistanceVar / multiplierVar;
@@ -37,6 +39,7 @@ function updateVars() {
     }
     band1Num = output[0];
     band2Num = output[1];
+    band1and2 = Number(band1Num + "" + band2Num);
   }
   toleranceVar = Number(document.getElementById("tolerance").value);
   resistanceVar = Number(document.getElementById("resistance").value);
@@ -89,7 +92,10 @@ function rect2click() {
 
 function rect3click() {
   multiplierVar = multiplierOptions[multiplierOptions.indexOf(multiplierVar) + 1];
+  multiplierArrayNum = multiplierOptions.indexOf(multiplierVar) + 1;
+  band1and2 = Number(band1Num + "" + band2Num);
   updateBandsCallSpecial()
+  document.getElementById("tolerance").value = band1and2 * multiplierVar;
 }
 
 function rect4click() {
