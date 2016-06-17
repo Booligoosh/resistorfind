@@ -100,7 +100,7 @@ function rect1click() {
 function rect2click() {
   band2Num = band2Num + 1;
   if (band2Num === 10) {
-    band2Num = 1;
+    band2Num = 0;
   }
   band1and2 = Number(band1Num + "" + band2Num);
   document.getElementById("resistance").value = band1and2 * multiplierVar;
