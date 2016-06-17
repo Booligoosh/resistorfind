@@ -13,6 +13,11 @@ var band2Num;
 var newToleranceIndex;
 var newMultiplierIndex;
 
+function updateBandsCall() {
+  updateBands();
+  updateBands();
+}
+
 function updateBands() {
   //Update vars
   var randomNothingness = getMultiplier();
@@ -41,7 +46,6 @@ function updateBands() {
   //Band 4
   document.getElementById("rect4").style.fill = band4colors[toleranceVar];
   window.scrollTo(0, -100000);
-  updateBands();
 }
 
 function getMultiplier() {
@@ -80,11 +84,11 @@ function rect2click() {
 function rect3click() {
   newMultiplierIndex = multiplierOptions.indexOf(multiplierVar) + 1;
   multiplierVar = multiplierOptions[newMultiplierIndex];
-  updateBands();
+  updateBandsCall()
 }
 
 function rect4click() {
   newToleranceIndex = toleranceOptions.indexOf(toleranceVar) + 1;
   toleranceVar = toleranceOptions[newToleranceIndex];
-  updateBands();
+  updateBandsCall();
 }
