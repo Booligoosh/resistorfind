@@ -10,8 +10,6 @@ var toleranceOptions = [1, 2, 5, 10];
 var multiplierArrayNum;
 var band1Num;
 var band2Num;
-var newToleranceIndex;
-var newMultiplierIndex;
 
 function updateBandsCall() {
   updateBands();
@@ -82,13 +80,11 @@ function rect2click() {
 }
 
 function rect3click() {
-  newMultiplierIndex = multiplierOptions.indexOf(multiplierVar) + 1;
-  multiplierVar = multiplierOptions[newMultiplierIndex];
+  multiplierVar = multiplierOptions[multiplierOptions.indexOf(multiplierVar) + 1];
   updateBandsCall()
 }
 
 function rect4click() {
-  newToleranceIndex = toleranceOptions.indexOf(toleranceVar) + 1;
-  toleranceVar = toleranceOptions[newToleranceIndex];
+  toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
   updateBandsCall();
 }
