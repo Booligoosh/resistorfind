@@ -108,7 +108,7 @@ function rect2click() {
 }
 
 function rect3click() {
-  if (multiplierOptions.indexOf(multiplierVar) + 1 > multiplierOptions.length) {
+  if (multiplierOptions.indexOf(multiplierVar) + 1 > multiplierOptions.length - 1) {
     multiplierVar = multiplierOptions[0];
   }
   else {
@@ -121,7 +121,7 @@ function rect3click() {
 }
 
 function rect4click() {
-  if (toleranceOptions.indexOf(toleranceVar) + 1 > toleranceOptions.length) {
+  if (toleranceOptions.indexOf(toleranceVar) + 1 > toleranceOptions.length - 1) {
     toleranceVar = toleranceOptions[0];
   }
   else {
