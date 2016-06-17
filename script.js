@@ -108,7 +108,7 @@ function rect2click() {
 }
 
 function rect3click() {
-  if (multiplierOptions.indexOf(multiplierVar) + 1 > toleranceOptions.length) {
+  if (multiplierOptions.indexOf(multiplierVar) + 1 > multiplierOptions.length) {
     multiplierVar = multiplierOptions[0];
   }
   else {
