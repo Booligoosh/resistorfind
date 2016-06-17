@@ -5,9 +5,13 @@ var band1colors = ["#000000", "#6e2c00", "#ff0000", "#ff8000", "#ffff00", "#0080
 var band2colors = ["#000000", "#6e2c00", "#ff0000", "#ff8000", "#ffff00", "#008000", "#0000ff", "#800080", "#646464", "#ffffff"];
 var band3colors = ["0filler", "#000000", "#6e2c00", "#ff0000", "#ff8000", "#ffff00", "#008000", "#0000ff"];
 var band4colors = ["0filler", "#6e2c00", "#ff0000", "3filler", "4filler", "#cc9933", "6filler", "7filler", "8filler", "9filler", "c9cbcb"];
+var multiplierOptions = [1, 10, 100, 1000, 10000, 100000, 1000000];
+var toleranceOptions = [1, 2, 5, 10];
 var multiplierArrayNum;
 var band1Num;
 var band2Num;
+var newToleranceIndex;
+var newMultiplierIndex;
 
 function updateBands() {
   //Update vars
@@ -63,4 +67,24 @@ function getMultiplier() {
       return(multiplierArrayNum);
     }
   }
+}
+
+function rect1click() {
+  
+}
+
+function rect2click() {
+  
+}
+
+function rect3click() {
+  newMultiplierIndex = multiplierOptions.indexOf(multiplierVar) + 1;
+  multiplierVar = multiplierOptions[newMultiplierIndex];
+  updateBands();
+}
+
+function rect4click() {
+  newToleranceIndex = toleranceOptions.indexOf(toleranceVar) + 1;
+  toleranceVar = toleranceOptions[newToleranceIndex];
+  updateBands();
 }
