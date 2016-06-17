@@ -95,7 +95,7 @@ function rect3click() {
   multiplierArrayNum = multiplierOptions.indexOf(multiplierVar) + 1;
   band1and2 = Number(band1Num + "" + band2Num);
   updateBandsCallSpecial()
-  document.getElementById("tolerance").value = band1and2 * multiplierVar;
+  document.getElementById("resistance").value = band1and2 * multiplierVar;
 }
 
 function rect4click() {
