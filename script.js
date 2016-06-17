@@ -94,6 +94,7 @@ function rect1click() {
   }
   band1and2 = Number(band1Num + "" + band2Num);
   document.getElementById("resistance").value = band1and2 * multiplierVar;
+  updateBandsCallSpecial()
 }
 
 function rect2click() {
@@ -103,10 +104,11 @@ function rect2click() {
   }
   band1and2 = Number(band1Num + "" + band2Num);
   document.getElementById("resistance").value = band1and2 * multiplierVar;
+  updateBandsCallSpecial()
 }
 
 function rect3click() {
-  if (multiplierOptions.indexOf(multiplierVar) + 1 > toleranceOptions.length - 1) {
+  if (multiplierOptions.indexOf(multiplierVar) + 1 > toleranceOptions.length) {
     multiplierVar = multiplierOptions[0];
   }
   else {
@@ -115,14 +117,16 @@ function rect3click() {
   multiplierArrayNum = multiplierOptions.indexOf(multiplierVar) + 1;
   band1and2 = Number(band1Num + "" + band2Num);
   document.getElementById("resistance").value = band1and2 * multiplierVar;
+  updateBandsCallSpecial()
 }
 
 function rect4click() {
-  if (toleranceOptions.indexOf(toleranceVar) + 1 > toleranceOptions.length - 1) {
+  if (toleranceOptions.indexOf(toleranceVar) + 1 > toleranceOptions.length) {
     toleranceVar = toleranceOptions[0];
   }
   else {
     toleranceVar = toleranceOptions[toleranceOptions.indexOf(toleranceVar) + 1];
   }
   document.getElementById("tolerance").value = toleranceVar.toString();
+  updateBandsCallSpecial()
 }
