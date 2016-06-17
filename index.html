@@ -169,10 +169,10 @@
   <div id="text">
     <h1>ResistorFind</h1>
     <form>
-      Resistance: <input type="text" name="resistance" id="resistance">&Omega;'s<br>
-      Tolerance: <input type="text" name="tolerance" id="tolerance">%<br>
+      Resistance: <input type="text" name="resistance" onChange="updateBandsCall()" id="resistance">&Omega;'s<br>
+      Tolerance: <input type="text" name="tolerance" onChange="updateBandsCall()" id="tolerance">%<br>
     </form>
-    <button onclick="updateBandsCall()">Go!</button>
+    <!-- <button onclick="updateBandsCall()">Go!</button> -->
   </div>
     <script src="http://booligoosh.github.io/resistorfind/script.js"></script>
   </body>
