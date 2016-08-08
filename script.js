@@ -13,6 +13,9 @@ var band2Num;
 var band1and2;
 var updateBandsCaller;
 
+updateVars();
+updateBands();
+
 function updateBandsCall() {
   updateVars();
   updateBandsCaller = updateBands();
