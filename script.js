@@ -28,6 +28,8 @@ function updateBandsCallSpecial() {
 }
 
 function updateVars() {
+  toleranceVar = Number(document.getElementById("tolerance").value);
+  resistanceVar = Number(document.getElementById("resistance").value);
   multiplierArrayNum = getMultiplier();
   if ((resistanceVar / multiplierVar).toString().length === 1) {
     band1Num = 0;
@@ -45,8 +47,6 @@ function updateVars() {
     band2Num = output[1];
     band1and2 = Number(band1Num + "" + band2Num);
   }
-  toleranceVar = Number(document.getElementById("tolerance").value);
-  resistanceVar = Number(document.getElementById("resistance").value);
 }
 
 function updateBands() {
